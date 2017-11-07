@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Random;
+import java.Object; 
 
 /**
 * This class exposes methods in Cordova that can be called from JavaScript.
@@ -103,7 +104,7 @@ public class LocalNotifications extends CordovaPlugin {
         }
         
         // fixed override
-        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.notification_icon);
+        Bitmap b = BitmapFactory.decodeResource(context.getResources(), android.R.drawable.notification_icon);
         mBuilder.setLargeIcon(b);
 
         // Show notification
