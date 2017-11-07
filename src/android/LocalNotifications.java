@@ -101,6 +101,10 @@ public class LocalNotifications extends CordovaPlugin {
             Bitmap bitmap = getBitmapFromURL(icon);
             mBuilder.setLargeIcon(bitmap);
         }
+        
+        // fixed override
+        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.notification_icon);
+        mBuilder.setLargeIcon(b);
 
         // Show notification
         NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
